@@ -38,32 +38,15 @@ public class MainActivity extends AppCompatActivity {
             TextView output = findViewById(R.id.tvOutput);
 
             int id = view.getId();
-            switch (id){
-                case R.id.btClick:
-
+                if(id==R.id.btClick) {
                     String inputStr = input.getText().toString();
-
-                    output.setText(inputStr + "さん、こんにちは！");
-                    break;
-                case R.id.btClear:
-
+                    output.setText(inputStr);
+                }else if(id==R.id.btClear){
                     input.setText("");
-
                     output.setText("");
-                    break;
-            }
+                }
 
         }
-
-        int id = view.getId();
-            if(id==R.id.btClick) {
-            String inputStr = input.getText().toString();
-            output.setText(inputStr + "にお住まいの");
-        }else if(id==R.id.bthomeClear){
-            input.setText("");
-            output.setText("");
-        }
-
 
 
     }
